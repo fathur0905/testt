@@ -11,9 +11,9 @@ display_screen_window = pygame.display.set_mode((scr_width, scr_height))
 play_ground = scr_height * 0.8
 game_image = {}
 game_audio_sound = {}
-player = 'images/bird.png'
-bcg_image = 'images/background.png'
-pipe_image = 'images/pipe.png'
+player = 'bird.png'
+bcg_image = 'background.png'
+pipe_image = 'pipe.png'
 
 
 def welcome_main_screen():
@@ -188,30 +188,30 @@ if __name__ == "__main__":
     time_clock = pygame.time.Clock()
     pygame.display.set_caption('Flappy Bird Game')
     game_image['numbers'] = (
-        pygame.image.load('images/0.png').convert_alpha(),
-        pygame.image.load('images/1.png').convert_alpha(),
-        pygame.image.load('images/2.png').convert_alpha(),
-        pygame.image.load('images/3.png').convert_alpha(),
-        pygame.image.load('images/4.png').convert_alpha(),
-        pygame.image.load('images/5.png').convert_alpha(),
-        pygame.image.load('images/6.png').convert_alpha(),
-        pygame.image.load('images/7.png').convert_alpha(),
-        pygame.image.load('images/8.png').convert_alpha(),
-        pygame.image.load('images/9.png').convert_alpha(),
+        pygame.image.load('0.png').convert_alpha(),
+        pygame.image.load('1.png').convert_alpha(),
+        pygame.image.load('2.png').convert_alpha(),
+        pygame.image.load('3.png').convert_alpha(),
+        pygame.image.load('4.png').convert_alpha(),
+        pygame.image.load('5.png').convert_alpha(),
+        pygame.image.load('6.png').convert_alpha(),
+        pygame.image.load('7.png').convert_alpha(),
+        pygame.image.load('8.png').convert_alpha(),
+        pygame.image.load('9.png').convert_alpha(),
     )
 
-    game_image['message'] = pygame.image.load('images/message.png').convert_alpha()
-    game_image['base'] = pygame.image.load('images/base.png').convert_alpha()
+    game_image['message'] = pygame.image.load('message.png').convert_alpha()
+    game_image['base'] = pygame.image.load('base.png').convert_alpha()
     game_image['pipe'] = (pygame.transform.rotate(pygame.image.load(pipe_image).convert_alpha(), 180),
                           pygame.image.load(pipe_image).convert_alpha()
                           )
 
     # Game sounds
-    game_audio_sound['die'] = pygame.mixer.Sound('sounds/die.wav')
-    game_audio_sound['hit'] = pygame.mixer.Sound('sounds/hit.wav')
-    game_audio_sound['point'] = pygame.mixer.Sound('sounds/point.wav')
-    game_audio_sound['swoosh'] = pygame.mixer.Sound('sounds/swoosh.wav')
-    game_audio_sound['wing'] = pygame.mixer.Sound('sounds/wing.wav')
+    game_audio_sound['die'] = pygame.mixer.Sound('die.wav')
+    game_audio_sound['hit'] = pygame.mixer.Sound('hit.wav')
+    game_audio_sound['point'] = pygame.mixer.Sound('point.wav')
+    game_audio_sound['swoosh'] = pygame.mixer.Sound('swoosh.wav')
+    game_audio_sound['wing'] = pygame.mixer.Sound('wing.wav')
 
     game_image['background'] = pygame.image.load(bcg_image).convert()
     game_image['player'] = pygame.image.load(player).convert_alpha()
